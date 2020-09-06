@@ -14,5 +14,13 @@ io.on('connection', client => {
 
         //Envia un mensaje a todos los clientes
         io.emit('mensaje',{admin:'Nuevo mensaje'});
-    })
+    });
+
+    //Desde un cliente envia un mensaje a todos los clientes
+    //e server lo escucha y lo envia a todo los clientes
+   client.on('emitir-mensaje',(payload)=>{
+      //console.clear;
+       io.emit('nuevo-mensaje','HOLAAAA');
+   })
+
   });
