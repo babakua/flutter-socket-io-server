@@ -21,7 +21,8 @@ io.on('connection', client => {
    client.on('emitir-mensaje',(payload)=>{
      // console.clear
       //Lo envia para todo el mundo pero no le llega al cliente remitente
-      client.broadcast.emit('nuevo-mensaje','Mensaje enviando desde algún cliente:'+payload) 
+    //  client.broadcast.emit('nuevo-mensaje','Mensaje enviando desde algún cliente:'+payload)
+    client.broadcast.emit('nuevo-mensaje',payload) 
       //io.emit('nuevo-mensaje',payload)//Emite a todos
        
 
