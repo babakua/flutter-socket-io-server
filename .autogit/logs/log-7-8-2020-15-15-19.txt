@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon Sep 07 2020 15:15:19 GMT-0400 (Bolivia Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-7-8-2020-14-44-58.txt
+
+
+Deleted files:
+
+
+Renamed files:

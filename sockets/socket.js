@@ -1,6 +1,9 @@
 
 const {io}= require('../index');
 
+const bands= new Bands();
+console.log('Inicializando el server');
+
 //El client es una conexion de un dispositivo
 io.on('connection', client => {
     console.log('Cliente conectado');
@@ -20,7 +23,7 @@ io.on('connection', client => {
     //e server lo escucha y lo envia a todo los clientes
    client.on('emitir-mensaje',(payload)=>{
        console.log(payload);
-       
+
      // console.clear
       //Lo envia para todo el mundo pero no le llega al cliente remitente y no se puede
       //leer el payload como un json ya que viene con un string
