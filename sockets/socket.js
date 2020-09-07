@@ -10,13 +10,15 @@ bands.addBand( new Band('Queen'));
 bands.addBand( new Band('ABDA'));
 bands.addBand( new Band('Molotov'));
 bands.addBand( new Band('Heroes del silencio'));
-
+console.log(bands);
 
 console.log('Inicializando el server');
 
 //El client es una conexion de un dispositivo
 io.on('connection', client => {
     console.log('Cliente conectado');
+    client.emit('active-bands', bands.getBands());
+
 
     client.on('disconnect', () => {
             console.log('Cliente desconectado');
@@ -44,7 +46,7 @@ io.on('connection', client => {
       //io.emit('nuevo-mensaje',payload)//Emite a todos
        
 
-  })
+  });
 
 });
 

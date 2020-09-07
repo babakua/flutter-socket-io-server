@@ -2,12 +2,13 @@ const Band= require('./band');
 class Bands{
 
     constructor(){
-        this.bans=[];
+        this.bands=[];
     }
 
     addBand( band = new Band()){
            // this.bands.push(band);
-         //  this.bands.push(band);
+          this.bands.push(band);
+         
     }
 
     getBands(){

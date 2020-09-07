@@ -36,7 +36,9 @@
     console.log('Escuchando emitir-mensaje:', payload);
   });
 
-
+ socket.on('active-bands',function (bands){
+   console.table(  bands);
+ });
   </script>
 
 </body>
