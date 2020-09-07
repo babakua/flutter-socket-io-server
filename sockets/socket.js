@@ -20,8 +20,11 @@ io.on('connection', client => {
     //e server lo escucha y lo envia a todo los clientes
    client.on('emitir-mensaje',(payload)=>{
      // console.clear
-      //Lo envia para todo el mundo pero no le llega al cliente remitente
+      //Lo envia para todo el mundo pero no le llega al cliente remitente y no se puede
+      //leer el payload como un json ya que viene con un string
     //  client.broadcast.emit('nuevo-mensaje','Mensaje enviando desde algún cliente:'+payload)
+   
+    //solamente pasando el payload podemos manejar el JSON
     client.broadcast.emit('nuevo-mensaje',payload) 
       //io.emit('nuevo-mensaje',payload)//Emite a todos
        
