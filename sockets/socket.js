@@ -13,7 +13,7 @@ io.on('connection', client => {
         console.log('mensaje:', payload);
 
         //Envia un mensaje a todos los clientes
-        io.emit('mensaje',{admin:'Nuevo mensaje'});
+        io.emit('mensaje',{admin:'El server indica que alguien se conecto !!'});
     });
 
     //Desde un cliente envia un mensaje a todos los clientes
