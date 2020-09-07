@@ -1,7 +1,17 @@
 
 const {io}= require('../index');
 
+const Bands = require('../models/bands');
+const Band = require('../models/band');
+
 const bands= new Bands();
+
+bands.addBand( new Band('Queen'));
+bands.addBand( new Band('ABDA'));
+bands.addBand( new Band('Molotov'));
+bands.addBand( new Band('Heroes del silencio'));
+
+
 console.log('Inicializando el server');
 
 //El client es una conexion de un dispositivo
