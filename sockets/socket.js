@@ -19,8 +19,13 @@ io.on('connection', client => {
     //Desde un cliente envia un mensaje a todos los clientes
     //e server lo escucha y lo envia a todo los clientes
    client.on('emitir-mensaje',(payload)=>{
-      //console.clear;
-       io.emit('nuevo-mensaje','HOLAAAA');
-   })
+      console.clear
+      //Lo envia para todo el mundo pero no le llega al cliente remitente
+      client.broadcast.emit('nuevo-mensaje','Mensaje enviando desde algún cliente:'+payload) 
+      //io.emit('nuevo-mensaje',payload)//Emite a todos
+       
 
-  });
+  })
+
+});
+
