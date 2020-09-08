@@ -65,6 +65,16 @@ io.on('connection', client => {
 
 });
 
+client.on ('delete-band',(payload)=>{
+  console.log(payload);
+  const id = new Band(payload.id);
+  bands.deleteBand(id);
+   
+  io.emit('active-bands',bands.getBands());
+
+});
+
+
 
 });
 
