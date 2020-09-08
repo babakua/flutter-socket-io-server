@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Tue Sep 08 2020 10:35:05 GMT-0400 (Bolivia Time)
+------------------------------------------------------
+
+Modified files:
+* public/index.html
+* sockets/socket.js
+
+
+Created files:
+* .autogit/logs/log-7-8-2020-16-46-19.txt
+
+
+Deleted files:
+
+
+Renamed files:
