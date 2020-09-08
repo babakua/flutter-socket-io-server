@@ -7,7 +7,7 @@ const Band = require('../models/band');
 const bands= new Bands();
 
 bands.addBand( new Band('Queen'));
-bands.addBand( new Band('ABDA'));
+bands.addBand( new Band('The police'));
 bands.addBand( new Band('Molotov'));
 bands.addBand( new Band('Heroes del silencio'));
 console.log(bands);
@@ -54,6 +54,17 @@ io.on('connection', client => {
       io.emit('active-bands',bands.getBands());
 
   });
+
+  
+  client.on ('add-band',(payload)=>{
+    console.log(payload);
+    const newBand = new Band(payload.name);
+    bands.addBand(newBand);
+     
+    io.emit('active-bands',bands.getBands());
+
+});
+
 
 });
 
