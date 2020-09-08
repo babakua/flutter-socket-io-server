@@ -6,10 +6,10 @@ const Band = require('../models/band');
 
 const bands= new Bands();
 
-bands.addBand( new Band('Queen'));
-bands.addBand( new Band('The police'));
-bands.addBand( new Band('Molotov'));
-bands.addBand( new Band('Heroes del silencio'));
+bands.addBand( new Band('American Air Line'));
+bands.addBand( new Band('COPA'));
+bands.addBand( new Band('JET BLUE'));
+bands.addBand( new Band('Air EUROPA'));
 console.log(bands);
 
 console.log('Inicializando el server');
@@ -70,7 +70,7 @@ client.on ('delete-band',(payload)=>{
   const id = new Band(payload.id);
   bands.deleteBand(id);
    
-  io.emit('active-bands',bands.getBands());
+ // io.emit('active-bands',bands.getBands());
 
 });
 
