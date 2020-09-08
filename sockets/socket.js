@@ -42,9 +42,16 @@ io.on('connection', client => {
     //  client.broadcast.emit('nuevo-mensaje','Mensaje enviando desde algún cliente:'+payload)
    
     //solamente pasando el payload podemos manejar el JSON
-    client.broadcast.emit('nuevo-mensaje',payload) 
+    client.broadcast.emit('nuevo-mensaje',payload) ;
       //io.emit('nuevo-mensaje',payload)//Emite a todos
        
+
+  });
+
+  client.on ('vote-band',(payload)=>{
+      console.log(payload);
+      bands.voteBand(payload.id);
+      io.emit('active-bands',bands.getBands());
 
   });
 
