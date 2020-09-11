@@ -15,7 +15,11 @@
 <body>
  <H1>Verificando el socket</H1>
 
-   <input type="text" name="votos">
+  <div id="content"></div>
+  <div id="content1"></div>
+  <div id="content2"></div>
+  <div id="content3"></div>
+   <input type="text" id="votos" >
 
  <script src="socket.io/socket.io.js"></script>
   <script>
@@ -42,11 +46,17 @@
  socket.on('active-bands',function (bands){
    console.clear();
    console.table(  bands);
+   var datos=bands[0].name+'-    Votos:'+bands[0].votes;
+   var  datos1=bands[1].name+'-  Votos:'+bands[1].votes;
+   var  datos2=bands[2].name+'-  Votos:'+bands[2].votes;
+     var  datos3=bands[3].name+'-Votos:'+bands[3].votes;
 
-   //var sn = getParameterByName('serialNumber');
+  document.getElementById('content').innerHTML=datos;
+  document.getElementById('content1').innerHTML=datos1;
+  document.getElementById('content2').innerHTML=datos2;
+  document.getElementById('content3').innerHTML=datos3;
+ 
 
-//document.getElementById("votos").innerHTML="45";
-document.getParameterByName("votos").innerHTML="45";
  });
   </script>
 
