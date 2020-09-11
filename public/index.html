@@ -14,6 +14,9 @@
 
 <body>
  <H1>Verificando el socket</H1>
+
+   <input type="text" name="votos">
+
  <script src="socket.io/socket.io.js"></script>
   <script>
     var socket = io();
@@ -39,6 +42,11 @@
  socket.on('active-bands',function (bands){
    console.clear();
    console.table(  bands);
+
+   //var sn = getParameterByName('serialNumber');
+
+//document.getElementById("votos").innerHTML="45";
+document.getParameterByName("votos").innerHTML="45";
  });
   </script>
 
